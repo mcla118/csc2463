@@ -1,0 +1,49 @@
+function setup() {
+    createCanvas(400, 200);
+  colorMode (HSB);
+  }
+  
+  function draw() {
+    background(0, 225, 0);
+
+// Create the circle for the body of pacman
+push ();
+fill (60,100,100);
+circle (110, 100, 165);
+pop ();
+
+//Create the triangle that is the mouth of pacman
+push ();
+fill (0,100,0);
+triangle (10, 20, 30, 180, 100, 100);
+pop ();
+
+
+// Create the aquare of the body of the red character
+fill (0, 255, 255);
+rect (220,82, 158, 100);
+
+//Create the circle of the body of the red character
+push ();
+strokeWeight (0);
+fill (0, 255, 255);
+arc (299, 90, 158, 160, 180, PI + QUARTER_PI, OPEN);
+pop ();
+
+// Outline of eyes
+push ();
+strokeWeight (0);
+fill (0, 0, 100);
+ellipse(260,90,50,50);
+ellipse(340,90,50,50);
+pop ();
+
+// Pupil of eyes
+push ();
+strokeWeight (0);
+fill (230, 80, 90);
+ellipse(260,90,30,30);
+ellipse(340,90,30,30);
+pop ();
+
+  }
